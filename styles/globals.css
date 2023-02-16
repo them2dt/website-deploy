@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "sonara-rounded";
+    src: url("./fonts/sonara-rounded.otf");
+}
+
+@font-face {
+    font-family: "jetbrains-regular";
+    src: url("./fonts/jetbrains-regular.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--background);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --background: #000000;
+    --background-transparent: #00000080;
+    --background-lighter-2x: #45454580;
+    --background-lighter: #15151580;
+    --background-darker: #05050580;
+    --foreground: #24dca2;
+    --foreground-lighter: #7bf8d0;
+    --black: #000;
+    --white: #fff;
+}
+
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.355);
+    z-index: 1000;
+}
+
+.invisible {
+    animation: hide 0.2s;
+    opacity: 0.2;
+    cursor: not-allowed;
+    pointer-events: none;
+}
